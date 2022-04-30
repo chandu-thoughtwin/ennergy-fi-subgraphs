@@ -1,0 +1,29 @@
+{
+    "network": "mbase",
+    "factory_address": "0xF6899c78240F9055F6a896D63Df4dBfbbAa4eace",
+    "minichef_address": "0x9E7E919AaA39eb92280fd539b093EE67d365e4e6",
+    "energyFi_bar_address": "0xBA571227fEA63965bFab3bDb3f4cA45f6882E57e",
+    "energy_maker_address": "0x61DfFD673B37F80AD6707a0C6EB39b57bf5dC97B",
+    "energy_address": "0x9f6e0E615585a8248dE15362393565415E71DE3D",
+    "weth_address": "0xA5fd1F6e7980Fd5cA9d062a762030D449990BBBf",
+    "bentobox_address": "0xa33B55d80D91B9763F81C1C699756806A6b068e3",
+    "energyFi_usdt_pair_address": "0x663300Db06365cE3cE366DcF3CB476868C254261",
+    "energyFi_usdt_pair": "0x663300Db06365cE3cE366DcF3CB476868C254261",
+    "usdc_weth_pair": "0x680a025da7b1be2c204d7745e809919bce074026",
+    "dai_weth_pair": "0xaD66D28eb1217c81b5d55dd1ec4DEaC31c8D6dE2",
+    "usdt_weth_pair": "0x002ca9e59eb1e6Aa52F2081a08BE72AA1beFA7cF",
+    "usdc_address": "0xC53ca2e8A0d26bd498D38064e40bB7F712180a9B",
+    "dai_address": "0xE55f16d23Cc8B1813ae44093a555AFa498bb8dfe",
+    "usdt_address": "0x05Bf07102EfEbb83Ba5F475fB18F843E8736B6E8",
+
+    "native_address": "0xA5fd1F6e7980Fd5cA9d062a762030D449990BBBf",
+    "complex_rewarder_address": "0xAd09cA83A8fA444E429337a6B14E84C5130FC48f",
+  
+    "factory": {
+      "address": "0xF6899c78240F9055F6a896D63Df4dBfbbAa4eace",
+      "startBlock": "2051488"
+    },
+    "minimum_usd_threshold_new_pairs": "3000",
+    "minimum_liquidity_threshold_eth": "5"
+  }
+  

@@ -1,0 +1,142 @@
+# Bar
+type Bar @entity {
+  # Contract address
+  id: ID!
+
+  # Decimals
+  decimals: Int!
+
+  # Name
+  name: String!
+
+  # EnergyFi token
+  energyFi: Bytes!
+
+  # Symbol
+  symbol: String!
+
+  # Total xEnergyFi supply
+  totalSupply: BigDecimal!
+
+  # Ratio xEnergyFi per EnergyFi
+  ratio: BigDecimal!
+
+  # xEnergyFi minted
+  xEnergyFiMinted: BigDecimal!
+
+  # xEnergyFi burned
+  xEnergyFiBurned: BigDecimal!
+
+  # EnergyFi staked
+  energyFiStaked: BigDecimal!
+
+  # EnergyFi staked USD
+  energyFiStakedUSD: BigDecimal!
+
+  # EnergyFi harvested
+  energyFiHarvested: BigDecimal!
+
+  # EnergyFi harvested USD
+  energyFiHarvestedUSD: BigDecimal!
+
+  # xEnergyFi age
+  xEnergyFiAge: BigDecimal!
+
+  # xEnergyFi age destroyed
+  xEnergyFiAgeDestroyed: BigDecimal!
+
+  # Users in the bar
+  users: [User!]! @derivedFrom(field: "bar")
+
+  # Updated at
+  updatedAt: BigInt!
+}
+
+# User
+type User @entity {
+  # ID
+  id: ID!
+
+  # Bar
+  bar: Bar
+
+  # xEnergyFi (balance)
+  xEnergyFi: BigDecimal!
+
+  # xEnergyFi In
+  xEnergyFiIn: BigDecimal!
+
+  # xEnergyFi Out
+  xEnergyFiOut: BigDecimal!
+
+  # Minted
+  xEnergyFiMinted: BigDecimal!
+
+  # Burned
+  xEnergyFiBurned: BigDecimal!
+
+  # xEnergyFi offset
+  xEnergyFiOffset: BigDecimal!
+
+  # xEnergyFi age
+  xEnergyFiAge: BigDecimal!
+
+  # xEnergyFi age destroyed
+  xEnergyFiAgeDestroyed: BigDecimal!
+
+  # Staked
+  energyFiStaked: BigDecimal!
+
+  # Sum of $ at time of staking
+  energyFiStakedUSD: BigDecimal!
+
+  # Harvested
+  energyFiHarvested: BigDecimal!
+
+  # Sum of $ at time of harvesting
+  energyFiHarvestedUSD: BigDecimal!
+
+  # To get bar pending energyFi (xEnergyFi * staked / bar.totalSupply)
+
+  # EnergyFi Out
+  energyFiOut: BigDecimal!
+
+  # EnergyFi In
+  energyFiIn: BigDecimal!
+
+  # USD Out
+  usdOut: BigDecimal!
+
+  # USD In
+  usdIn: BigDecimal!
+
+  # Updated at
+  updatedAt: BigInt!
+
+  # energyFi offset
+  energyFiOffset: BigDecimal!
+
+  # usd offset
+  usdOffset: BigDecimal!
+}
+
+# History
+enum Timeframe {
+  Day
+}
+
+type History @entity {
+  id: ID!
+  date: Int!
+  timeframe: Timeframe!
+  energyFiStaked: BigDecimal!
+  energyFiStakedUSD: BigDecimal!
+  energyFiHarvested: BigDecimal!
+  energyFiHarvestedUSD: BigDecimal!
+  xEnergyFiAge: BigDecimal!
+  xEnergyFiAgeDestroyed: BigDecimal!
+  xEnergyFiMinted: BigDecimal!
+  xEnergyFiBurned: BigDecimal!
+  xEnergyFiSupply: BigDecimal!
+  ratio: BigDecimal!
+}
